@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Sorting Visualizer</title>
+  </head>
+  <body> 
+      
+    <!-- Navbar -->
+    <nav class="navbar navbar-light  p-3"> 
+      <div>
+        <button id="newArray" class="nav-items btn btn-outline-dark me-2" onclick="GenrateArray()" type="button">Genrate New Array</button>
+        </div>
+        <div>
+        <label for="ArraySize" style="color: black; font-weight: bold;" > Array Size </label>
+        <input type="range" name="" id="ArraySize" oninput="changeArray()" class="slider me-5"  min="20" max="100" step="1" value="60">
+        <label for="delayTime" style="color: black; font-weight: bold;" class=" "> Speed </label>
+        <input type="range" name="" id="delayTime" oninput="changeDelay()" class="slider"  min="10" max="1000" step="100" value="40">
+      </div>
+      <div>
+        <button id="bubbleSort" class="btn  btn-outline-dark    me-2" onclick="BubbleSort()" type="button">Bubble Sort</button>
+        <button id="selectionsort" class="btn btn-outline-dark me-2" onclick="SelectionSort()" type="button">Selection Sort</button>
+        <button id="insertionsort" class="btn btn-outline-dark me-2" onclick="insertionSort()" type="button">Inseration Sort</button>
+        <button id="quicksort" class="btn btn-outline-dark me-2" onclick="quickSort()" type="button">Quick Sort</button>
+        <button id="mergesort" class="btn btn-outline-dark me-2" onclick="mergeSort()" type="button">Merge Sort</button>
+      </div>
+    </nav>
+
+    <div class="text-center mt-4" id="title">Sorting Visualizer</div>
+<section>
+    <div class="container-fluid d-flex justify-content-center" id="bars-container">
+      <!-- Bars -->
+    </div>
+    
+  </section>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="./js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
